@@ -2,9 +2,6 @@ package graph.metrics;
 
 import java.util.Map;
 
-/**
- * Metrics collection interface that combines counters and timings.
- */
 public interface Metrics {
     void incrementCounter(String name);
 
