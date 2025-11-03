@@ -10,9 +10,6 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Utility to load graph datasets from JSON files.
- */
 public final class GraphLoader {
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
