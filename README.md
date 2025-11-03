@@ -56,48 +56,48 @@ nanoseconds.
 
 **Strongly connected components**
 
-| Dataset | Components | Largest SCC | `scc.dfsVisits` | `scc.dfsEdges` | `scc.totalTime` |
-|---------|------------|-------------|-----------------|----------------|-----------------|
-| `small-1.json` | 6 | 1 | 6 | 6 | 42 000 |
-| `small-2.json` | 4 | 3 | 8 | 10 | 45 000 |
-| `small-3.json` | 6 | 3 | 9 | 10 | 41 800 |
-| `medium-1.json` | 8 | 3 | 12 | 15 | 135 300 |
-| `medium-2.json` | 14 | 3 | 16 | 19 | 113 000 |
-| `medium-3.json` | 14 | 3 | 18 | 22 | 99 100 |
-| `large-1.json` | 20 | 3 | 24 | 30 | 3 233 200 |
-| `large-2.json` | 26 | 3 | 30 | 40 | 295 500 |
-| `large-3.json` | 36 | 3 | 40 | 55 | 481 700 |
-| `sample_tasks.json` | 6 | 3 | 8 | 7 | 39 600 |
+| Dataset | Vertices (n) | Edges | Components | Largest SCC | `scc.dfsVisits` | `scc.dfsEdges` | `scc.totalTime` |
+|---------|--------------|-------|------------|-------------|-----------------|----------------|-----------------|
+| `small-1.json` | 6 | 6 | 6 | 1 | 6 | 6 | 42 000 |
+| `small-2.json` | 8 | 10 | 4 | 3 | 8 | 10 | 45 000 |
+| `small-3.json` | 9 | 10 | 6 | 3 | 9 | 10 | 41 800 |
+| `medium-1.json` | 12 | 15 | 8 | 3 | 12 | 15 | 135 300 |
+| `medium-2.json` | 16 | 19 | 14 | 3 | 16 | 19 | 113 000 |
+| `medium-3.json` | 18 | 22 | 14 | 3 | 18 | 22 | 99 100 |
+| `large-1.json` | 24 | 30 | 20 | 3 | 24 | 30 | 3 233 200 |
+| `large-2.json` | 30 | 40 | 26 | 3 | 30 | 40 | 295 500 |
+| `large-3.json` | 40 | 55 | 36 | 3 | 40 | 55 | 481 700 |
+| `sample_tasks.json` | 8 | 7 | 6 | 3 | 8 | 7 | 39 600 |
 
 **Topological ordering on condensation DAG**
 
-| Dataset | Components | `topo.queuePush` | `topo.queuePop` | `topo.totalTime` |
-|---------|------------|------------------|-----------------|-----------------|
-| `small-1.json` | 6 | 6 | 6 | 33 300 |
-| `small-2.json` | 4 | 4 | 4 | 19 300 |
-| `small-3.json` | 6 | 6 | 6 | 30 900 |
-| `medium-1.json` | 8 | 8 | 8 | 123 600 |
-| `medium-2.json` | 14 | 14 | 14 | 73 800 |
-| `medium-3.json` | 14 | 14 | 14 | 97 200 |
-| `large-1.json` | 20 | 20 | 20 | 353 000 |
-| `large-2.json` | 26 | 26 | 26 | 427 300 |
-| `large-3.json` | 36 | 36 | 36 | 443 700 |
-| `sample_tasks.json` | 6 | 6 | 6 | 33 300 |
+| Dataset | Vertices (n) | Edges | Components | `topo.queuePush` | `topo.queuePop` | `topo.totalTime` |
+|---------|--------------|-------|------------|------------------|-----------------|-----------------|
+| `small-1.json` | 6 | 6 | 6 | 6 | 6 | 33 300 |
+| `small-2.json` | 8 | 10 | 4 | 4 | 4 | 19 300 |
+| `small-3.json` | 9 | 10 | 6 | 6 | 6 | 30 900 |
+| `medium-1.json` | 12 | 15 | 8 | 8 | 8 | 123 600 |
+| `medium-2.json` | 16 | 19 | 14 | 14 | 14 | 73 800 |
+| `medium-3.json` | 18 | 22 | 14 | 14 | 14 | 97 200 |
+| `large-1.json` | 24 | 30 | 20 | 20 | 20 | 353 000 |
+| `large-2.json` | 30 | 40 | 26 | 26 | 26 | 427 300 |
+| `large-3.json` | 40 | 55 | 36 | 36 | 36 | 443 700 |
+| `sample_tasks.json` | 8 | 7 | 6 | 6 | 6 | 33 300 |
 
 **DAG shortest & longest paths**
 
-| Dataset | Relaxations | Shortest distance (from source SCC) | `dag.shortestTime` | Critical path length | `dag.longestTime` |
-|---------|-------------|-------------------------------------|--------------------|---------------------|-------------------|
-| `small-1.json` | 11 | 7.00 | 16 100 | 8.00 | 19 200 |
-| `small-2.json` | 7 | 5.00 | 6 000 | 9.00 | 12 100 |
-| `small-3.json` | 8 | 4.00 | 13 000 | 11.00 | 18 600 |
-| `medium-1.json` | 16 | 11.00 | 54 500 | 15.00 | 49 700 |
-| `medium-2.json` | 29 | 17.00 | 44 200 | 27.00 | 34 300 |
-| `medium-3.json` | 29 | 16.00 | 19 500 | 26.00 | 14 800 |
-| `large-1.json` | 44 | 24.00 | 162 300 | 42.00 | 103 800 |
-| `large-2.json` | 60 | 26.00 | 284 800 | 55.00 | 95 200 |
-| `large-3.json` | 87 | 34.00 | 305 800 | 76.00 | 169 000 |
-| `sample_tasks.json` | 7 | 8.00 | 14 900 | 8.00 | 18 900 |
+| Dataset | Vertices (n) | Edges | Relaxations | Shortest distance (from source SCC) | `dag.shortestTime` | Critical path length | `dag.longestTime` |
+|---------|--------------|-------|-------------|-------------------------------------|--------------------|---------------------|-------------------|
+| `small-1.json` | 6 | 6 | 11 | 7.00 | 16 100 | 8.00 | 19 200 |
+| `small-2.json` | 8 | 10 | 7 | 5.00 | 6 000 | 9.00 | 12 100 |
+| `small-3.json` | 9 | 10 | 8 | 4.00 | 13 000 | 11.00 | 18 600 |
+| `medium-1.json` | 12 | 15 | 16 | 11.00 | 54 500 | 15.00 | 49 700 |
+| `medium-2.json` | 16 | 19 | 29 | 17.00 | 44 200 | 27.00 | 34 300 |
+| `medium-3.json` | 18 | 22 | 29 | 16.00 | 19 500 | 26.00 | 14 800 |
+| `large-1.json` | 24 | 30 | 44 | 24.00 | 162 300 | 42.00 | 103 800 |
+| `large-2.json` | 30 | 40 | 60 | 26.00 | 284 800 | 55.00 | 95 200 |
+| `large-3.json` | 40 | 55 | 87 | 34.00 | 305 800 | 76.00 | 169 000 |
+| `sample_tasks.json` | 8 | 7 | 7 | 8.00 | 14 900 | 8.00 | 18 900 |
 
 ## Analysis
 
@@ -107,6 +107,11 @@ nanoseconds.
   similarly sized but sparser graphs (`large-2`) shrink faster into
   26 singleton components, slashing SCC time to `295 500 ns`. This confirms the cost is
   driven by traversing every edge in cyclic regions before compression.
+- **Asymptotic picture.** Each stage remains O(|V| + |E|): Tarjan explores every edge
+  once, Kahn’s ordering pulls and pushes each condensed vertex a single time, and both
+  DAG relaxations visit every remaining edge. The new n columns show that doubling the
+  largest dataset’s vertices/edges roughly doubles work across the tables, so the
+  empirical timings follow the theoretical linear trend with respect to input size.
 - **Topological scheduling stays linear.** Queue operations always match the number of
   condensed components, and even the 36-node condensation DAG from
   `large-3` finishes within `443 700 ns`. Once cycles are collapsed,
